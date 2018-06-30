@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo": {
+    "host": "ds221631.mlab.com",
+    "port": 21631,
+    "url": "mongodb://account-admin-1397:5EClVOwvCZicVx4Rc@ds221631.mlab.com:21631/bitrex",
+    "database": "bitrex",
+    "password": "5EClVOwvCZicVx4Rc",
+    "name": "mongo",
+    "user": "account-admin-1397",
+    "connector": "mongodb"
+  }
+}

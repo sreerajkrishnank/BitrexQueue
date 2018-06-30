@@ -1,0 +1,65 @@
+{
+  "name": "OneMinuteData",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "timestamp": {
+      "type": "date",
+      "required": false
+    },
+    "marketName": {
+      "type": "string",
+      "required": false
+    },
+    "bid": {
+      "type": "number",
+      "required": false
+    },
+    "open": {
+      "type": "number",
+      "required": false
+    },
+    "close": {
+      "type": "number",
+      "required": false
+    },
+    "high": {
+      "type": "number",
+      "required": false
+    },
+    "low": {
+      "type": "number",
+      "required": false
+    },
+    "volume": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "generateReport": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "reportData",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "generates report",
+      "http": [
+        {
+          "path": "/generate-report",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}

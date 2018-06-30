@@ -1,0 +1,57 @@
+{
+  "name": "FiveMinutesData",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "timestamp": {
+      "type": "date"
+    },
+    "marketName": {
+      "type": "string"
+    },
+    "bid": {
+      "type": "number"
+    },
+    "open": {
+      "type": "number"
+    },
+    "close": {
+      "type": "number"
+    },
+    "high": {
+      "type": "number"
+    },
+    "low": {
+      "type": "number"
+    },
+    "volume": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "generateReport": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "reportData",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "generates report",
+      "http": [
+        {
+          "path": "/generate-report",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}
